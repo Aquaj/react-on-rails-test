@@ -7,12 +7,10 @@ import QuotesDisplay from './QuotesDisplay'
 
 const App = (props) => (
   <Router>
-    <div>
-      <Route
-        path='/'
-        render={(routeProps) => <QuotesDisplay {...props} {...routeProps} />}
-      />
-    </div>
+    <Route
+      path='/'
+      render={(routeProps) => <QuotesDisplay startingAt={props.starting} {...routeProps} />}
+    />
   </Router>
 )
 
